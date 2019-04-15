@@ -1,0 +1,38 @@
+$def with(clientes, message)
+<h3>
+    <a href="/clientes">Eventos</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+<br>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_evento" id="id_evento" value="$clientes.id_evento" />
+
+    <div class="form-group">
+    <label for="titulo">titulo</label>
+    <input readonly id="titulo" type="text" class="form-control" name="titulo" size="30" value="$clientes.titulo"/>
+</div><div class="form-group">
+    <label for="descripcion">descripcion</label>
+    <input readonly id="descripcion" type="text" class="form-control" name="descripcion" size="30" value="$clientes.descripcion"/>
+</div><div class="form-group">
+    <label for="fecha">fecha</label>
+    <input readonly id="fecha" type="text" class="form-control" name="fecha" size="30" value="$clientes.fecha"/>
+</div><div class="form-group">
+    <label for="hora">hora</label>
+    <input readonly id="hora" type="text" class="form-control" name="hora" size="30" value="$clientes.hora"/>
+</div><div class="form-group">
+    <label for="ubicacion">ubicacion</label>
+    <input readonly id="ubicacion" type="text" class="form-control" name="ubicacion" size="30" value="$clientes.ubicacion"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span> Borrar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
